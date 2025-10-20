@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Formular de Inregistrare animale</title>
+        <link rel="stylesheet" type="text/css" href="animale.css">
+    </head>
+
+    <body>
+        <section>
+            <h1>Formular de Inregistrare animal</h1>
+            <p>Completeaza formularul de mai jos pentru a te inregistra ca animal la clinica veterinara.</p>
+            
+            <br>
+            <form>
+            <label>Nume stapan</label>
+            <input type="text" name="nume stapan" placeholder="Te numesti..">
+
+            <label>Telefon</label>
+            <input type="text" name="telefon" placeholder="Numar de telefon..">
+
+            <label>Nume animal</label>
+            <input type="text" name="nume animal" placeholder="Si...Cum il cheama?">
+
+            <label>Specie</label>
+            <select name="specie">
+                <option value="caine">Caine</option>
+                <option value="pisica">Pisica</option>
+                <option value="dinozaur">Dinozaur</option>
+            </select>
+
+            <div class="radio-container">
+                <p>Sexul animalului</p>
+                <input type="radio" value="Mascul">
+                <input type="radio" value="Femela">
+                <input type="radio" value="ei ele">
+            </div>
+
+            <div class="radio-container">
+                <p>Servicii dorite</p>
+                <input type="checkbox" value="Vaccinare">
+                <input type="checkbox" value="Deparazitare">
+                <input type="checkbox" value="Consult">
+            </div>
+            
+             <div>
+                <p>Observatii</p>
+                <textarea rows="10" cols="40"></textarea>
+            </div>
+            
+            <div class="button-container">
+                <input class="reset" type="submit" value="Reset">
+                <input class="send" type="submit" value="Submit">
+            </div>
+            </form>
+        </section>
+        
+    </body>
+</html>

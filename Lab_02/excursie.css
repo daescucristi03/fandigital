@@ -1,0 +1,54 @@
+* {
+  --color-primary: #fefae0;
+  --color-accent: #dda15e;
+  --color-shading: #bc6c25;
+  --color-bg: #606c38;
+  --color-dark: #283618;
+
+  margin: auto;
+}
+
+body {
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+table {
+    width: 90vw;
+    border: var(--color-accent) 1px solid;
+    padding: 0;
+}
+
+h1, p, td {
+    color: var(--color-primary);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-shading);
+}
+
+tr:hover {
+    background-color: var(--color-accent);
+}
+
+th {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+    border: var(--color-accent) 1px solid;
+}
+
+td {
+    border: var(--color-accent) 1px solid;
+}
+
+img {
+    max-width: 400px;
+    max-height: auto;
+
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* ugliest css ever written award goes to that one above hehe */
