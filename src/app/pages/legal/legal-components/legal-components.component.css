@@ -1,0 +1,82 @@
+
+.comic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.legal-card {
+  width: 100%;
+  max-width: 600px;
+  background: var(--color-bg);
+  border: 3px solid var(--color-dark);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 6px 6px 0 var(--color-dark);
+  transition: transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+
+  &:hover {
+    transform: scale(1.03) rotate(-1deg);
+  }
+}
+
+.comic-title {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.legal-info {
+  text-align: left;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  strong {
+    color: var(--color-primary);
+  }
+
+  .comic-link {
+    color: var(--color-dark);
+    text-decoration: none;
+    border-bottom: 2px dashed var(--color-accent);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.legal-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* space between buttons */
+
+  .comic-button {
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-dark);
+    color: var(--color-dark);
+    font-family: 'Bangers', cursive;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 var(--color-dark);
+
+    &:hover {
+      transform: scale(1.05) rotate(-2deg);
+      background-color: var(--color-primary);
+      color: var(--color-bg);
+    }
+  }
+}

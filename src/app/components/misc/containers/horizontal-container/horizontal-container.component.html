@@ -1,1 +1,3 @@
-<p>horizontal-container works!</p>
+<div class="horizontal-box" [ngStyle]="{'grid-template-columns': 'repeat(' + maxColumns + ', 1fr)', 'gap': gap}">
+  <ng-content></ng-content>
+</div>

@@ -1,1 +1,19 @@
-<p>legal-components works!</p>
+<div class="comic-container">
+  <div class="comic-card legal-card">
+    <h2 class="comic-title">Company Information</h2>
+
+    <div class="legal-info">
+      <p><strong>Company:</strong> {{ company.name }}</p>
+      <p><strong>Address:</strong> {{ company.address }}</p>
+      <p><strong>VAT ID:</strong> {{ company.vat }}</p>
+      <p><strong>Email:</strong>
+        <a href="mailto:{{ company.email }}" class="comic-link">{{ company.email }}</a>
+      </p>
+    </div>
+
+    <div class="legal-links">
+      <a routerLink="/privacy-policy" class="comic-button">Privacy Policy</a>
+      <a routerLink="/terms" class="comic-button">Terms of Use</a>
+    </div>
+  </div>
+</div>

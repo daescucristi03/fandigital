@@ -1,0 +1,21 @@
+<div class="comic-container testimonials-section">
+  <h2 class="comic-title">What Our Fans Say!</h2>
+  <p class="comic-description">
+    Hear from our amazing community who love our products and services!
+  </p>
+
+  <div class="testimonial-list">
+    <div 
+      class="testimonial-item"
+      *ngFor="let t of testimonials; let i = index"
+      [ngClass]="{'align-right': i % 2 !== 0}">
+      
+      <div class="testimonial-text-container">
+        <p class="testimonial-text">"{{ t.text }}"</p>
+        <p class="testimonial-author">— {{ t.author }}</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="comic-button cta-button">Leave a review</button>
+</div>

@@ -1,0 +1,76 @@
+.best-sellers-section {
+  margin: 40px 0;
+  text-align: center;
+
+  .section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    text-shadow: 2px 2px var(--color-dark);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+
+    @media (max-width: 480px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .section-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .products-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 480px) {
+      gap: 15px;
+    }
+
+    app-product-box {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  /* CTA Button Styling */
+  .cta-container {
+    margin-top: 30px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    padding: 12px 28px;
+    border: 3px solid var(--color-dark);
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 2px 2px var(--color-dark);
+
+    &:hover {
+      transform: scale(1.05) rotate(-1deg);
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+      box-shadow: 3px 3px var(--color-dark);
+    }
+  }
+}

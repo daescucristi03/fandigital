@@ -1,1 +1,27 @@
-<p>cart works!</p>
+<div class="comic-container comic-cart">
+  <h2 class="comic-title">Your Cart</h2>
+
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    Your cart is empty! 😢
+  </div>
+
+  <div *ngFor="let item of cartItems" class="comic-card cart-item">
+    <div class="item-info">
+      <span class="item-name">{{ item.name }}</span>
+      <span class="item-price">${{ item.price.toFixed(2) }}</span>
+    </div>
+
+    <div class="item-controls">
+      <button class="comic-button" (click)="decreaseQty(item)">-</button>
+      <span class="quantity">{{ item.quantity }}</span>
+      <button class="comic-button" (click)="increaseQty(item)">+</button>
+      <button class="comic-button remove" (click)="removeItem(item)">Remove</button>
+    </div>
+  </div>
+
+  <div *ngIf="cartItems.length > 0" class="cart-footer">
+    <span class="total">Total: ${{ total.toFixed(2) }}</span>
+    <button class="comic-button clear" (click)="clearCart()">Clear Cart</button>
+    <button class="comic-button checkout">Checkout</button>
+    </div>
+</div>

@@ -1,1 +1,26 @@
-<p>product-box works!</p>
+<div class="comic-container">
+  <div class="comic-card product-card">
+    <!-- Product Image with optional explosion -->
+    <div class="product-image" *ngIf="!imageError && productImage">
+      <img 
+        [src]="productImage" 
+        [alt]="productTitle" 
+        (error)="onImageError($event)">
+      <div class="comic-badge" *ngIf="badgeText">{{ badgeText }}</div>
+    </div>
+    <div class="explosion" *ngIf="imageError"></div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <h3 class="product-title">{{ productTitle }}</h3>
+      <div class="product-price">{{ productPrice }}</div>
+      <p class="product-description">{{ productDescription }}</p>
+    </div>
+
+    <!-- Actions -->
+    <div class="product-actions">
+      <button class="comic-button add-to-cart">Add to Cart</button>
+      <button class="comic-button details">View Details</button>
+    </div>
+  </div>
+</div>

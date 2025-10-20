@@ -1,0 +1,8 @@
+<!-- main cursor follows the mouse exactly -->
+<div class="comic-cursor"
+     [ngStyle]="{'left.px': x, 'top.px': y}"
+     [class.clicking]="isClicking"></div>
+
+<!-- trailing inner circle follows with delay -->
+<div class="comic-cursor-inner"
+     [ngStyle]="{'left.px': innerX, 'top.px': innerY}"></div>

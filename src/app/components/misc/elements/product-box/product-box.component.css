@@ -1,0 +1,120 @@
+
+.comic-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.product-card {
+  background-color: var(--color-bg);
+  border: 3px solid var(--color-dark);
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 5px 5px 0px var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  .product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      display: block;
+      border-bottom: 3px solid var(--color-dark);
+      object-fit: cover;
+      max-height: 250px;
+    }
+
+    .comic-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--color-primary);
+      color: var(--color-bg);
+      font-family: 'Bangers', cursive;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border: 2px solid var(--color-dark);
+      transform: rotate(-10deg);
+    }
+  }
+
+  /* Explosion effect if image fails */
+  .explosion {
+    width: 100%;
+    height: 150px; /* placeholder space where image would be */
+    /* background: black; */
+    background-color: var(--color-primary);
+    background-size: contain;
+    animation: popExplosion 0.5s ease-out forwards;
+  }
+
+  .product-info {
+    padding: 1rem;
+    text-align: center;
+
+    .product-title {
+      font-family: 'Bangers', cursive;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      text-shadow: 2px 2px var(--color-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .product-price {
+      font-family: 'Bangers', cursive;
+      font-size: 1.3rem;
+      color: var(--color-accent);
+      text-shadow: 1px 1px var(--color-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .product-description {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: var(--color-dark);
+    }
+  }
+
+  .product-actions {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+
+  .comic-button {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: 2px solid var(--color-dark);
+    font-family: 'Bangers', cursive;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: scale(1.15) rotate(3deg);
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+    }
+  }
+}
+}
+
+/* Explosion animation */
+@keyframes popExplosion {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}

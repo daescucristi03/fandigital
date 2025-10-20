@@ -1,0 +1,26 @@
+<div class="comic-container">
+  <div class="best-sellers-section">
+    <h2 class="section-title">BEST SELLERS</h2>
+    <p class="section-description">
+      Check out our most popular comic-style gadgets and collectibles!  
+      These favorites are flying off the shelves—grab yours before they’re gone!
+    </p>
+    <div class="products-row">
+      <app-product-box
+        *ngFor="let product of products"
+        [productImage]="product.image"
+        [productTitle]="product.title"
+        [productPrice]="product.price"
+        [productDescription]="product.description"
+        [badgeText]="product.badge || ''">
+      </app-product-box>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="cta-container">
+      <a routerLink="/store" class="comic-button cta-button">
+        SEE ALL PRODUCTS
+      </a>
+    </div>
+  </div>
+</div>

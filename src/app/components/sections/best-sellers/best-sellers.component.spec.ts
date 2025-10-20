@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeparatorTopComponent } from './separator-top.component';
+import { BestSellersComponent } from './best-sellers.component';
 
-describe('SeparatorTopComponent', () => {
-  let component: SeparatorTopComponent;
-  let fixture: ComponentFixture<SeparatorTopComponent>;
+describe('BestSellersComponent', () => {
+  let component: BestSellersComponent;
+  let fixture: ComponentFixture<BestSellersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SeparatorTopComponent]
+      declarations: [BestSellersComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SeparatorTopComponent);
+    fixture = TestBed.createComponent(BestSellersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

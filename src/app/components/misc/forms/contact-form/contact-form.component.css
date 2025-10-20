@@ -1,0 +1,85 @@
+.contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+
+  .comic-heading {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: var(--color-primary);
+    text-shadow: 2px 2px var(--color-dark);
+    margin-bottom: 10px;
+  }
+
+  .section-description {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    margin-bottom: 30px;
+  }
+
+  .comic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .comic-input,
+      .comic-textarea {
+        border: 2px solid var(--color-dark);
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        &:focus {
+          border-color: var(--color-primary);
+          transform: scale(1.02) rotate(-1deg);
+        }
+      }
+
+      .comic-textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+    }
+
+    .comic-button {
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+      font-family: 'Bangers', cursive;
+      font-size: 1.5rem;
+      padding: 12px 20px;
+      border: 3px solid var(--color-dark);
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.2s, background-color 0.2s;
+      &:hover {
+        transform: scale(1.1) rotate(-2deg);
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .success-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+  }
+}

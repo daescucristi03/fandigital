@@ -1,0 +1,15 @@
+.horizontal-box {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(var(--columns, 3), 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+:host {
+  --columns: 3;
+}
+
+:host-context([maxColumns]) {
+  --columns: attr(maxColumns number);
+}

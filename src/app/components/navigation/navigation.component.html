@@ -1,1 +1,38 @@
-<p>navigation works!</p>
+<nav class="comic-navbar">
+  <div class="nav-container">
+    <!-- Left side -->
+    <div class="nav-left">
+      <a routerLink="/" class="logo">Fan<span>Digital</span></a>
+      <ul [class.open]="isMenuOpen" class="nav-links">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/store">Store</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right side -->
+    <div class="nav-right">
+      <ng-container *ngIf="isLoggedIn; else guest">
+        <div class="user-box">
+          <img src="assets/user-avatar.png" alt="User" class="avatar" />
+          <span class="username">ComicFan99</span>
+          <button class="comic-btn danger" (click)="logout()">Logout</button>
+        </div>
+      </ng-container>
+
+      <ng-template #guest>
+        <button class="comic-btn" (click)="login()">Login</button>
+        <button class="comic-btn yellow">Register</button>
+      </ng-template>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="menu-icon" (click)="toggleMenu()">
+      <div [class.change]="isMenuOpen" class="bar1"></div>
+      <div [class.change]="isMenuOpen" class="bar2"></div>
+      <div [class.change]="isMenuOpen" class="bar3"></div>
+    </div>
+  </div>
+</nav>
+
